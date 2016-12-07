@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # bootstrap 4 gem
 gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'secure_headers', '~> 3.5', '>= 3.5.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
