@@ -4,5 +4,4 @@ class ApplicationController < ActionController::Base
   def allow_iframe_requests
     response.headers.delete('X-Frame-Options')
   end
-
 end
