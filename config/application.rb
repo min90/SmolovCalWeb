@@ -16,7 +16,7 @@ module SmolovCal
     	config.x_frame_options = 'ALLOW-FROM https://quiet-shelf-52098.herokuapp.com'
     	config.csp = {
     		default_src: %w('self' https://quiet-shelf-52098.herokuapp.com),
-    		frame_ancestors: %w('self' https://quiet-shelf-52098.herokuapp.com)
+    		frame_ancestors: %w(https://quiet-shelf-52098.herokuapp.com)
     	}
     end
   end
