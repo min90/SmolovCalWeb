@@ -13,6 +13,7 @@ module SmolovCal
     # -- all .rb files in that directory are automatically loaded.
     config.action_dispatch.default_headers = {
     'X-Frame-Options' => 'ALLOW-FROM http://smolovcal.com'
+    'Content-Security-Policy' => 'frame-ancestors http://smolovcal.com'
     }
   end
 end
