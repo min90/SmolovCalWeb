@@ -12,7 +12,7 @@ module SmolovCal
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.action_dispatch.default_headers = {
-    'X-Frame-Options' => 'ALLOW-FROM https://quiet-shelf-52098.herokuapp.com/'
+    'X-Frame-Options' => 'ALLOW-FROM http://smolovcal.com'
     }
   end
 end
