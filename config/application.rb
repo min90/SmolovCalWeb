@@ -18,7 +18,7 @@ module SmolovCal
     SecureHeaders::Configuration.default do |config|
     	config.csp = {
     		default_src: %w(https: 'self'),
-    		frame_ancestors: %w(http://smolovcal.com)
+    		frame_ancestors: %w('self http://smolovcal.com)
     	}
     end
   end
