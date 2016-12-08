@@ -16,7 +16,6 @@ module SmolovCal
     	config.x_frame_options = 'ALLOW-FROM http://smolovcal.com'
     	config.csp = {
     		default_src: %w('self' smolovcal.com),
-    		frame_ancestors: %w('http://smolovcal.com'),
     	}
     end
   end
