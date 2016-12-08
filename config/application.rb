@@ -12,7 +12,7 @@ module SmolovCal
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.action_display.default_headers = {
+    config.action_dispatch.default_headers = {
     	'X-Frame-Options' => 'ALLOWALL'
     }
 
@@ -22,6 +22,6 @@ module SmolovCal
     # 		default_src: %w('self' smolovcal.com),
     # 		frame_ancestors: %w(smolovcal.com)
     # 	}
-    end
+    # end
   end
 end
