@@ -13,7 +13,7 @@ module SmolovCal
     # -- all .rb files in that directory are automatically loaded.
 
     SecureHeaders::Configuration.default do |config|
-    	config.x_frame_options = 'ALLOWALL'
+    	config.x_frame_options = 'ALLOW-FROM http://smolovcal.com'
     	config.csp = {
     		default_src: %w('self' smolovcal.com),
     	}
