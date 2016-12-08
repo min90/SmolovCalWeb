@@ -12,12 +12,16 @@ module SmolovCal
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    SecureHeaders::Configuration.default do |config|
-    	config.x_frame_options = 'ALLOW-FROM smolovcal.com'
-    	config.csp = {
-    		default_src: %w('self' smolovcal.com),
-    		frame_ancestors: %w(smolovcal.com)
-    	}
+    config.action_display.default_headers = {
+    	'X-Frame-Options' => 'ALLOWALL'
+    }
+
+    # SecureHeaders::Configuration.default do |config|
+    # 	config.x_frame_options = 'ALLOW-FROM smolovcal.com'
+    # 	config.csp = {
+    # 		default_src: %w('self' smolovcal.com),
+    # 		frame_ancestors: %w(smolovcal.com)
+    # 	}
     end
   end
 end
