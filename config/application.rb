@@ -16,12 +16,10 @@ module SmolovCal
     	'X-Frame-Options' => 'ALLOWALL'
     }
 
-    # SecureHeaders::Configuration.default do |config|
-    # 	config.x_frame_options = 'ALLOW-FROM smolovcal.com'
-    # 	config.csp = {
-    # 		default_src: %w('self' smolovcal.com),
-    # 		frame_ancestors: %w(smolovcal.com)
-    # 	}
-    # end
+    SecureHeaders::Configuration.default do |config|
+    	config.csp = {
+    		default_src: %w('self' smolovcal.com),
+    	}
+    end
   end
 end
