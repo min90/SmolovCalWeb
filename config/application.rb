@@ -13,9 +13,10 @@ module SmolovCal
     # -- all .rb files in that directory are automatically loaded.
 
     SecureHeaders::Configuration.default do |config|
-    	config.x_frame_options = 'ALLOW-FROM http://smolovcal.com'
+    	config.x_frame_options = 'ALLOW-FROM quiet-shelf-52098.herokuapp.com'
     	config.csp = {
-    		default_src: %w('self' smolovcal.com),
+    		default_src: %w('self' quiet-shelf-52098.herokuapp.com),
+            frame_ancestors: %w(quiet-shelf-52098.herokuapp.com)
     	}
     end
   end
