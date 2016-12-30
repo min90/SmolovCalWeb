@@ -1,0 +1,18 @@
+<div class="container">
+</br>
+	<div class="row">
+		<div class="col-md-1">
+	<%= link_to workouts_path, method: :get, class: 'btn btn-outline-info btn-md' do %>
+		<span class="fa fa-undo"></span>
+	<% end %>
+	</div>
+	<div class="col-md-11">
+		<h3>Cycle <%= @workout.name %></h3>
+	</div>
+</hr>
+	<% if @workout.jr? %> 
+		<%= render partial: 'junior', locals: {workout: @workout} %>
+	<% elsif @workout.sr?  %>
+		<%= render partial: 'senior', locals: {workout: @workout} %>
+	<% end %>
+</div>

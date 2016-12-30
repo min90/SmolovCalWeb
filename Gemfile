@@ -32,6 +32,8 @@ gem 'secure_headers', '~> 3.5', '>= 3.5.1'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
+gem 'simple_form', '~> 3.3', '>= 3.3.1'
+gem "font-awesome-rails"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

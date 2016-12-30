@@ -10,12 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206203217) do
+ActiveRecord::Schema.define(version: 20161223200552) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.text     "name"
+    t.boolean  "jr"
+    t.boolean  "sr"
+    t.integer  "max"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal  "increase"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_workouts_on_user_id", using: :btree
   end
 
 end

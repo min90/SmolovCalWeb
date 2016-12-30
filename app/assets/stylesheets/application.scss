@@ -12,3 +12,43 @@
  *
  */
  @import "bootstrap";
+ @import "font-awesome";
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+}
+
+.navbar .navbar-nav {
+	padding-top: 10px;
+}
+
+.intro-header {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: 60%;
+	text-align: center;
+	color: #f8f8f8;
+	background: url(barbell.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+.workout-row {
+	cursor: pointer;
+}

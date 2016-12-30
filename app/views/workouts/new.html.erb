@@ -1,0 +1,15 @@
+<div class="container">
+</br>
+	<h3>Create a new cycle</h3>
+
+	<%= simple_form_for @new_workout, class: 'form-horizontal' do |f| %>
+	<%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+	<%= f.input :name, as: :string %>
+	<%= f.input :jr %>
+	<%= f.input :sr %>
+	<%= f.input :max %>
+	<%= f.input :increase %>
+	<%= f.button :submit, class: 'btn btn-primary' %> 
+	<% end %>
+
+</div>
