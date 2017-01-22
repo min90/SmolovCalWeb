@@ -9,7 +9,7 @@
 	<div class="col-md-11">
 		<h3>Cycle <%= @workout.name %></h3>
 	</div>
-</hr>
+</br>
 	<% if @workout.jr? %> 
 		<%= render partial: 'junior', locals: {workout: @workout} %>
 	<% elsif @workout.sr?  %>

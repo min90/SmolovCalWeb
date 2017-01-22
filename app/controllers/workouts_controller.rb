@@ -25,6 +25,10 @@ class WorkoutsController < ApplicationController
 	def edit
 	end
 
+	def update_progress
+		p params
+	end
+
 	def show
 		@workout = Workout.find(params[:id])
 	end

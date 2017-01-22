@@ -16,3 +16,48 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+	$("input[type=checkbox]").change(function() {
+		if (this.checked) {
+			var valueOfCheckbox = $(this);
+			var workoutID = $("")
+			var nameOfCheckbox = this.name;
+			formatProgress(nameOfCheckbox, valueOfCheckbox.val());
+		};
+	});
+});
+
+function formatProgress(name, day) {
+	var progress = name + day;
+	sendProgress(progress);
+}
+
+function sendProgress(progress) {
+	$.ajax({
+		method: "POST",
+		url: "/update_progress",
+		dataType: 'script',
+		data: {
+			tmp_progress: progress
+		},
+		success: {
+			//Display success
+		}
+	});
+}
+
+// function updateInfo(time) {
+// 	var time;
+// 	var complete_title = $('#hostname').html();
+// 	var sub_hostname = complete_title.substr(7, complete_title.length)
+// 	$.ajax({
+// 		method: "GET",
+// 		url: "/get_info",
+// 		dataType: 'script',
+// 		data: {
+// 			created_at: time,
+// 			hostname: sub_hostname
+// 		}
+// 	})
+// }

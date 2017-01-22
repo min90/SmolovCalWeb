@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   get '/user' => 'users#index'
+  post '/update_progress' => 'workouts#update_progress'
 
   resources :workouts
 end
